@@ -1,0 +1,15 @@
+-
+    var topNavigationList = [
+        {label: 'Home', link: '/home'},
+        {label: 'HTML', link: '/html'},
+        {label: 'CSS', link: '/css'},
+        {label: 'JavaScript', link: '/javascript'},
+    ];
+header
+    //- pre=landingPage
+    each navigation in topNavigationList
+        //- check if navigation label is the same as landingPage
+        if navigation.label == landingPage
+            a.current(href=navigation.link)=navigation.label
+        else
+            a(href=navigation.link)=navigation.label
