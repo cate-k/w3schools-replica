@@ -10,6 +10,6 @@ header
     each navigation in topNavigationList
         //- check if navigation label is the same as landingPage
         if navigation.label == landingPage
-            a.current(href=navigation.link)=navigation.label
+            a.current(href=`${baseUrl}${navigation.link}`)=navigation.label
         else
-            a(href=navigation.link)=navigation.label
+            a(href=`${baseUrl}${navigation.link}`)=navigation.label

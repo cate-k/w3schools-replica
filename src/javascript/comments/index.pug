@@ -1,0 +1,18 @@
+extends ../../_component/layout/template
+
+block cool-config
+    -
+        var myTitle = 'Learn to Code';
+        var myHeading = 'Learn to code JavaScript Comments for beginners';
+        var myDescription = 'JavaScript Comments are useful!';
+        var landingPage = 'JavaScript';
+        var activeLink = '/javascript/comments';
+
+block awesome-content
+    h1=myHeading
+    p=myDescription
+    h2 JavaScript Comments
+    p JavaScript comments can be used to explain JavaScript code, and to make it more readable.
+    p JavaScript comments can also be used to prevent execution when testing alternative code.
+    h2 Example
+    p #[span(style="color:green") // This is a comment.]

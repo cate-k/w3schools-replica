@@ -1,0 +1,44 @@
+extends ../../_component/layout/template    
+    
+block cool-config
+    -
+        var myTitle = 'Learn to Code';
+        var myHeading = 'Learn to code CSS Colors for beginners';
+        var myDescription = 'Colors in CSS are very easy to use.';
+        var landingPage = 'CSS';
+        var activeLink = '/css/colors';
+
+block awesome-content
+    h1=myHeading
+    p=myDescription
+    h2 CSS Colors
+    p Colors in CSS are most often specified by:
+    ul
+        li a valid color name
+        li an RGB value
+        li a HEX value
+    h2 Example
+    h3 Color Names
+    p Colors are set by using color names:
+    table(width="100%")
+        tr
+            td(bgcolor="red", width="50%")
+            td red
+        tr
+            td(bgcolor="green", width="50%")
+            td green
+        tr
+            td(bgcolor="blue", width="50%")
+            td blue
+        tr
+            td(bgcolor="cyan", width="50%")
+            td cyan
+        tr
+            td(bgcolor="orange", width="50%")
+            td orange
+        tr
+            td(bgcolor="pink", width="50%")
+            td pink
+        tr
+            td(bgcolor="purple", width="50%")
+            td purple

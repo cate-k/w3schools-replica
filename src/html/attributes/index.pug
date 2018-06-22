@@ -1,0 +1,17 @@
+extends ../../_component/layout/template
+
+block cool-config
+    -
+        var myTitle = 'Learn to Code';
+        var myHeading = 'Learn to code HTML Attributes for beginners';
+        var myDescription = 'Attributes provide additional information about HTML elements.';
+        var landingPage = 'HTML';
+        var activeLink = '/html/attributes';
+
+block awesome-content          
+    h1=myHeading
+    p=myDescription
+    h2 Example
+    p(title="This is a tooltip") This paragraph has a tooltip.
+    p The next image will have a width of 200 and a height of 100. If you see the words, "Photo of loaves of bread" instead of the picture, you're looking at alternative text.
+    img(src="http://lorempixel.com/200/100/food/10", width="200", height="100", alt="Photo of loaves of bread")

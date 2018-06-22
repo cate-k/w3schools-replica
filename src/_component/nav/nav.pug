@@ -29,17 +29,19 @@
             linkList: [
                 {label: 'JavaScript Comments', link: '/javascript/comments'},
                 {label: 'JavaScript Variables', link: '/javascript/variables'},
-                {label: 'JavaScript Operators', link: '/javacript/operators'},
+                {label: 'JavaScript Operators', link: '/javascript/operators'},
             ]
         },
     }; 
 nav
     //- we check to see if sideNavigationList has a property with the value of landingPage
     //- and if it has we display this value vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
-    //- adn if it doesn't we display this value                                    vvvvvvvvvvv
+    //- and if it doesn't we display this value                                    vvvvvvvvvvv
     //- it's a quick fix
     h3=sideNavigationList[landingPage] && sideNavigationList[landingPage].title || 'Not found'
     if sideNavigationList[landingPage] && sideNavigationList[landingPage].linkList
         each navigation in sideNavigationList[landingPage].linkList
-            a(href=navigation.link)=navigation.label
-
+            if navigation.link == activeLink
+                a.current(href=`${baseUrl}${navigation.link}`)=navigation.label
+            else
+                a(href=`${baseUrl}${navigation.link}`)=navigation.label
